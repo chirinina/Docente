@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------
 // Pega aquí la URL de la aplicación web que copiaste de Google Apps Script.
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbzg-dTwEM8rVzTKmYwL48lfPu0ywn9IvQ88uwXybwdPn-0QNpPOJLnOv5wOwddGuIPndA/exec";
+  "https://script.google.com/macros/s/AKfycbxsbydAyr8oknGnBbzysJRY2sSV1zQgD9B-jdrYrwBEVo4NXQCWvmc56i3Dkvlzn0JPpw/exec";
 // -------------------------------------------------------------------
 
 // --- FUNCIONES AUXILIARES ---
