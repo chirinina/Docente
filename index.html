@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.esam.edu.bo/img/logo_esam_principal.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="starfield"></div>
+    <div id="starfield2"></div>
+    <div id="starfield3"></div>
+
+    <div class="dashboard-layout">
+      <!-- ======================= SIDEBAR ======================= -->
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-header">
+          <span
+            class="logo-text"
+            style="
+              background: linear-gradient(to right, #0024ff, #eaf603);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              display: inline-block;
+            "
+          >
+            Esam<span style="color: #06b6d4">.</span>Monteagudo
+          </span>
+        </div>
+
+        <div class="teacher-profile">
+          <div id="teacher-avatar" class="avatar">?</div>
+          <div id="teacher-name" class="name">Cargando...</div>
+          <div class="role">Docente / Consultor</div>
+        </div>
+
+        <ul class="sidebar-nav">
+          <li class="active">
+            <a href="#"><i class="fas fa-chalkboard-user"></i> Mis Módulos</a>
+          </li>
+        </ul>
+
+        <div class="summary-title">Resumen General</div>
+        <div class="summary-container" id="summary-container">
+          <!-- Los resúmenes se generarán con JS -->
+        </div>
+
+        <div class="sidebar-footer" id="sidebar-footer">
+          <!-- La fecha de actualización se generará con JS -->
+        </div>
+      </aside>
+
+      <!-- ======================= MAIN CONTENT ======================= -->
+      <main class="dashboard-main">
+        <header class="main-header fade-in-stagger">
+          <h1>Universo Docente🧑‍🎓</h1>
+          <p>Bienvenido a tu centro de mando. Revisa tus programas y clases.</p>
+        </header>
+
+        <div
+          id="accordion-container"
+          class="accordion-container fade-in-stagger"
+        >
+          <!-- El contenido se generará dinámicamente -->
+          <div
+            id="loading-state"
+            style="
+              text-align: center;
+              padding: 40px;
+              background: var(--bg-glass);
+              border-radius: var(--border-radius);
+              border: 1px solid var(--border-glass);
+            "
+          >
+            <i
+              class="fas fa-spinner fa-spin"
+              style="
+                font-size: 48px;
+                color: var(--accent-primary);
+                margin-bottom: 20px;
+              "
+            ></i>
+            <h2 style="font-size: 24px; margin-bottom: 10px">
+              Buscando tus datos en la galaxia...
+            </h2>
+            <p style="color: var(--text-secondary)">Un momento, por favor.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
