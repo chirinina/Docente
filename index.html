@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Dashboard - Cargando...</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.esam.edu.bo/img/logo_esam_principal.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Enlazamos nuestro archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="starfield"></div>
+    <div id="starfield2"></div>
+    <div id="starfield3"></div>
+
+    <!-- El contenedor principal que nuestro JavaScript llenará -->
+    <div id="app-container">
+      <!-- Mensaje de carga inicial -->
+      <div class="loading-container">
+        <div class="loader-icon">
+          <i class="fas fa-satellite-dish fa-spin"></i>
+        </div>
+        <h1>Contactando con la base de datos...</h1>
+        <p>Obteniendo su cronograma de misiones.</p>
+      </div>
+    </div>
+
+    <!-- Enlazamos nuestros archivos JavaScript al final -->
+    <script src="shared-functions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
