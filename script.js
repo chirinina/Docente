@@ -1,8 +1,8 @@
 // =================================================================
-// CONFIGURACIÓN
+// CÓDIGO FINAL Y COMPLETO PARA VERCEL (script.js)
 // =================================================================
+
 // ¡MUY IMPORTANTE! Pega aquí la URL de tu Web App de Google Script.
-// Es la URL que obtienes en el "Paso 3: Despliegue".
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbymx-wFLaxfykPviuE8fgB0bs2NuvX5Tzijt7kTiYmOtD4pum14jCrBqKc4OWoliEVZaw/exec";
 
@@ -17,7 +17,6 @@ function parseDateStringHelper(dateString) {
   const [, day, month, year] = match.map(Number);
   const dateObj = new Date(year, month - 1, day);
 
-  // Validar si la fecha es correcta (ej. no es 31 de Febrero)
   if (
     dateObj.getFullYear() === year &&
     dateObj.getMonth() === month - 1 &&
@@ -75,8 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderDashboard(data) {
     loadingState.style.display = "none";
-
-    // Actualizar título y sidebar
     document.title = `Cosmic Dashboard - ${data.teacherName}`;
     document.getElementById("teacher-name").textContent = data.teacherName;
     document.getElementById("teacher-avatar").textContent = data.teacherName
@@ -88,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Agrupar clases por programa
     const groupedByProgram = data.classes.reduce((acc, cls) => {
       const programKey = cls.programas || "Programa no especificado";
       if (!acc[programKey]) acc[programKey] = [];
@@ -96,21 +92,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return acc;
     }, {});
 
-    // Renderizar estadísticas
     renderStats(
       data.classes,
       Object.keys(groupedByProgram).length,
       data.lastUpdated
     );
 
-    // Renderizar acordeón de programas y módulos
     for (const programaNombre in groupedByProgram) {
       const programClasses = groupedByProgram[programaNombre];
       const pod = createProgramPod(programaNombre, programClasses);
       accordionContainer.appendChild(pod);
     }
 
-    // Adjuntar eventos al acordeón y abrir el primero
     setupAccordion();
   }
 
